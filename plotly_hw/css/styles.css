@@ -1,0 +1,23 @@
+.navbar {
+    padding: 30px;
+    margin: 0px;
+    background-color: teal;
+    color: white;
+    text-align: center;
+
+  }
+
+
+h1 {
+    color: white;
+    font-size: 40px;
+    margin: auto;
+
+}
+
+h2 {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin: auto;
+}
