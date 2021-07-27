@@ -1,6 +1,8 @@
+// collect data jason to read
 d3.json("data/samples.json").then(function(data) {
   // console.log(data);
   
+  // make dropdown have the list of IDs
   let datanames = data.names;
   var dropdown = d3.select("#selection");
 
@@ -32,6 +34,7 @@ d3.json("data/samples.json").then(function(data) {
     console.log(inputValue);
     console.log(data);
 
+    // get the values for each of the keys that we need
     for (i in data.metadata) {
       if (data.metadata[i].id == inputValue) {
         var bacteriaID = data.metadata[i].id;
@@ -45,6 +48,7 @@ d3.json("data/samples.json").then(function(data) {
       }
     }
 
+    // get the values for each of the keys that we need
     for (i in data.samples) {
       if (data.samples[i].id == inputValue) {
         var otuIDs = data.samples[i].otu_ids;
@@ -54,13 +58,13 @@ d3.json("data/samples.json").then(function(data) {
 
     }
      
-      // Then, select the unordered list element by class name
+  // Select the summary section to display new data
   var list = d3.select(".summary");
 
-  // remove any bacteria information from the list to
+  // remove any bacteria information from the list
   list.html("");
 
-  // append stats to the list
+  // append info to the list
   list.append("li").text(`Bacteria ID: ${bacteriaID}`);
   list.append("li").text(`Ethnicity: ${bacteriaEthnicity}`);
   list.append("li").text(`Gender: ${bacteriaGender}`);
