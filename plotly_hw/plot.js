@@ -57,6 +57,7 @@ d3.json("data/samples.json").then(function(data) {
       }
 
     }
+
      
   // Select the summary section to display new data
   var list = d3.select(".summary");

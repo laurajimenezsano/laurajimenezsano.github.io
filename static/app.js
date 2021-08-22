@@ -1,10 +1,5 @@
 // from data.js
 var tableData = data;
-
-// YOUR CODE HERE!
-
-// log table within html file
-
 var tbody = d3.select("tbody");
 
 // Function to create table
